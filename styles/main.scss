@@ -1,130 +1,136 @@
-@import './config';
-@import './colors';
+@import "./config";
+@import "./colors";
 
 #main {
-    position: relative;
-    height: 100%;
-    background-color: $--clr-veryDarkBlue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100%;
+  background-color: $--clr-veryDarkBlue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-    width: 80%;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 1140px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
 
-    @include mobile() {
-        flex-direction: column-reverse;
-    }
-    
-    &__content {
-        width: 54%;
-        background-color: $clr-darkDesaturatedBlue;
-        padding: 70px;
-        color: $clr-white;
-        font-family: inter, sans-serif;
+  @include mobile() {
+    flex-direction: column-reverse;
+    width: 375px;
+  }
 
-        @include mobile() {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 38px;
-            margin-bottom: 30px;
-            max-width: 90%;
-
-            @include mobile() {
-                font-size: 22px;
-                max-width: 100%;
-                margin: 20px 0 16px 0;
-            }
-
-            span {
-                color: $clr-softViolet;
-            }
-        }
-
-        p {
-            max-width: 70%;
-            margin-bottom: 70px;
-            color: $clr-slightlyTransparentWhiteP;
-            line-height: 1.6;
-
-            @include mobile() {
-                max-width: 100%;
-                font-size: 13px;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    &__stats {
-        display: flex;
-        gap: 60px;
-        color: $clr-white;
-        font-family: inter, sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-
-        @include mobile() {
-            flex-direction: column;
-            font-size: 18px;
-            gap: 26px;
-        }
-
-        span {
-            display: block;
-            color: $clr-slightlyTransparentWhiteH;
-            text-transform: uppercase;
-            margin-top: 10px;
-            font-size: 15px;
-            font-weight: 400;
-
-            @include mobile() {
-                font-size: 13px;
-            }
-        }
-    }
-
-    &__image {
-        position: relative;
-        width: 46%;
-        background-image: url('../images/image-header-desktop.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        @include mobile() {
-            width: 100%;
-            height: 200px;
-            background-image: url('../images/image-header-mobile.jpg');
-        }
-        
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: $clr-softViolet;
-            mix-blend-mode: multiply;
-        }
-       
-    }
-}
-
-.attribution {
-    position: relative;
-    bottom: 40px;
-    text-align: center;
+  &__content {
+    width: 54%;
+    background-color: $clr-darkDesaturatedBlue;
+    padding: 70px;
     color: $clr-white;
     font-family: inter, sans-serif;
 
-    a {
+    @include mobile() {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 30px;
+      max-width: 90%;
+
+      @include mobile() {
+        font-size: 22px;
+        max-width: 100%;
+        margin: 20px 0 16px 0;
+      }
+
+      span {
+        color: $clr-softViolet;
+      }
+    }
+
+    p {
+      max-width: 70%;
+      margin-bottom: 70px;
+      color: $clr-slightlyTransparentWhiteP;
+      line-height: 1.6;
+
+      @include mobile() {
+        max-width: 100%;
+        font-size: 13px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 60px;
+    color: $clr-white;
+    font-family: inter, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+
+    @include mobile() {
+      flex-direction: column;
+      font-size: 18px;
+      gap: 26px;
+    }
+
+    span {
+      display: block;
+      color: $clr-slightlyTransparentWhiteH;
+      text-transform: uppercase;
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: 400;
+
+      @include mobile() {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 46%;
+    background-image: url("../images/image-header-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mobile() {
+      width: 100%;
+      height: 250px;
+      background-image: url("../images/image-header-mobile.jpg");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $clr-softViolet;
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+.attribution {
+  position: relative;
+  bottom: 20px;
+  text-align: center;
+  color: $clr-white;
+  font-family: inter, sans-serif;
+
+  @include mobile() {
+    font-size: 0.8rem;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  a {
     color: $clr-softViolet;
     font-weight: 700;
-    }
+  }
 }
